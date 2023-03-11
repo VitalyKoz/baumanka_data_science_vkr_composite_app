@@ -3,4 +3,5 @@ numpy
 flask
 scikit-learn
 keras
+tensorflow
 gunicorn
