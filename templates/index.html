@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+
+	<h2>Укажите входные параметры композитного материала</h2>
+	<p></p> 
+    <form action="" method="post">
+        
+		<table>
+			<tr>
+				<td>
+					<label>Плотность, кг/м3</label>
+					<input type="text" size="10" name="density" />
+				</td>
+				<td>
+					<label>Модуль упругости, ГПа</label>
+					<input type="text" size="10" name="elasticity" />
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label>Количество отвердителя, м.%</label>
+					<input type="text" size="10" name="hardener" />
+				</td>
+				<td>
+					<label>Содержание эпоксидных групп,%_2</label>
+					<input type="text" size="10" name="epoxid" />
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label>Температура вспышки, С_2</label>
+					<input type="text" size="10" name="temperature" />
+				</td>
+				<td>
+					<label>Поверхностная плотность, г/м2</label>
+					<input type="text" size="10" name="surface_density" />
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label>Потребление смолы, г/м2</label>
+					<input type="text" size="10" name="resin" />
+				</td>
+				<td>
+					<label>Угол нашивки, град</label>
+					<input type="text" size="10" name="cover_angle" />
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label>Шаг нашивки</label>
+					<input type="text" size="10" name="cover_step" />
+				</td>
+				<td>
+					<label>Плотность нашивки</label>
+					<input type="text" size="10" name="cover_strength" />
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label>Соотношение матрица-наполнитель</label>
+					<input type="text" size="10" name="matrix_filler_ratio" />
+				</td>
+				<td><td>
+			</tr>
+		</table>
+		<p>
+			<input type="submit">
+		</p>
+    </form>
+
+	<hr></hr>
+
+	<p>
+        <span>Модуль упругости при растяжении, ГПа:&nbsp;&nbsp;</span>{{result['elasticity_on_stretching']}}
+    </p>
+    <p>
+        <span>Прочность при растяжении, МПа:&nbsp;&nbsp;</span>{{result['solidity_on_stretching']}}
+    </p>
+    <p>
+        <span>Соотношение матрица-наполнитель:&nbsp;&nbsp;</span>{{result['matrix_filler_ratio']}}
+    </p>
+	
+</body>
+</html>
