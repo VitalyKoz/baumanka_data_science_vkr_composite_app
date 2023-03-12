@@ -117,10 +117,10 @@ def compute():
         
         # Model 3
         
-        features_2 = pd.Series([density, hardener, epoxid, temperature, result['elasticity_on_stretching'], result['solidity_on_stretching'], resin, cover_angle, cover_step, elasticity_boxcox, surface_density_boxcox, cover_strength_boxcox], index=features_names_2, dtype='float64').to_frame().T
-        X_to_use_2 = my_data_transformer(features_2, scaler_minmax_to_use_matrix, scaler_normalize_to_use_matrix, scaler_minmax_for_cross_to_use_matrix, scaler_standard_for_pca_to_use_matrix, pca_to_use_matrix, ['elasticity_on_stretching', 'solidity_on_stretching'])
-        matrix_filler_model = load_model(f'{app.root_path}/model_to_use/matrix_filler_best_model.h5')
-        result['matrix_filler_ratio'] = matrix_filler_model.predict(X_to_use_2)[0][0]
+        # features_2 = pd.Series([density, hardener, epoxid, temperature, result['elasticity_on_stretching'], result['solidity_on_stretching'], resin, cover_angle, cover_step, elasticity_boxcox, surface_density_boxcox, cover_strength_boxcox], index=features_names_2, dtype='float64').to_frame().T
+        # X_to_use_2 = my_data_transformer(features_2, scaler_minmax_to_use_matrix, scaler_normalize_to_use_matrix, scaler_minmax_for_cross_to_use_matrix, scaler_standard_for_pca_to_use_matrix, pca_to_use_matrix, ['elasticity_on_stretching', 'solidity_on_stretching'])
+        # matrix_filler_model = load_model(f'{app.root_path}/model_to_use/matrix_filler_best_model.h5')
+        # result['matrix_filler_ratio'] = matrix_filler_model.predict(X_to_use_2)[0][0]
     
     return render_template('index.html', result=result)
 
