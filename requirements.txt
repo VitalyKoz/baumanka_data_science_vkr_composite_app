@@ -5,4 +5,5 @@ flask
 scikit-learn
 keras
 tensorflow
+h5py
 gunicorn
