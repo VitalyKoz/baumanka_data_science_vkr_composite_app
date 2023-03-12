@@ -1,5 +1,6 @@
 pandas
 numpy
+scipy
 flask
 scikit-learn
 keras
